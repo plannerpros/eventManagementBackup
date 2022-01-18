@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.planner">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+
+
+
+
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:exported="true"
+        android:theme="@style/Theme.Planner">
+
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="rzp.device_token.share" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".VenueImageSlider"
+            android:exported="false" />
+        <activity
+            android:name=".DateAndTimeActivity"
+            android:exported="false"
+            android:parentActivityName=".planning" />
+        <activity
+            android:name=".NoOfPeople_actitvity"
+            android:exported="false"
+            android:parentActivityName=".planning" />
+        <activity
+            android:name=".activity_venueChooser"
+            android:exported="false"
+            android:parentActivityName=".planning" />
+        <activity
+            android:name=".activity_eventType"
+            android:exported="false"
+            android:parentActivityName=".planning" />
+        <activity
+            android:name=".activity_display"
+            android:exported="false"
+            android:parentActivityName=".dashboard" />
+        <activity
+            android:name=".activity_collectdetails"
+            android:exported="false"
+            android:parentActivityName=".activity_display" />
+        <activity
+            android:name=".feedback1"
+            android:exported="false"
+            android:label="Feedback"
+            android:parentActivityName=".dashboard" />
+        <activity
+            android:name=".transactions"
+            android:exported="true"
+            android:label="Transactions"
+            android:parentActivityName=".dashboard" />
+        <activity
+            android:name=".tracking"
+            android:exported="false"
+            android:label="Track the status"
+            android:parentActivityName=".dashboard" />
+        <activity
+            android:name=".planning"
+            android:exported="false"
+            android:label="Plan an event"
+            android:parentActivityName=".dashboard" />
+        <activity
+            android:name=".activity_signup"
+            android:exported="false"
+            android:label="REGISTER"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".dashboard"
+            android:exported="false"
+            android:label="Dashboard"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/CheckoutTheme"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <data
+                    android:host="rzp.io"
+                    android:scheme="io.rzp" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+
+                    />
+
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

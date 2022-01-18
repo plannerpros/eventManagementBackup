@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_8"
+    tools:context="feedback1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/question1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/previous"
+            android:id="@+id/previous_button"
+            android:background="@drawable/previous"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="20sp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="5sp"
+            android:text="FEEDBACK"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="35sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:id="@+id/question1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90sp"
+        android:text="How satisfied were you with the event?"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171" />
+
+
+    <TextView
+        android:id="@+id/gender1"
+        android:layout_width="312dp"
+        android:layout_height="55dp"
+        android:text="How likely are you to attend our future events?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.382" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.247">
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/gender2"
+        android:layout_width="337dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="380dp"
+        android:text="What were your greatest take-away from the event?"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/takeaway"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/takeaway"
+        android:layout_width="267dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="436dp"
+        android:ems="10"
+        android:hint="enter your comment here"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <TextView
+        android:id="@+id/gender3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
+        android:text="Please provide suggestions for improving our future events"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/submit_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender2"
+        app:layout_constraintVertical_bias="0.941" />
+
+    <EditText
+        android:id="@+id/suggestions"
+        android:layout_width="244dp"
+        android:layout_height="57dp"
+        android:ems="10"
+        android:hint="please give your review here"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender3"
+        app:layout_constraintVertical_bias="0.134" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="116dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#D500F9"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472"
+        tools:ignore="MissingConstraints">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:layout_marginBottom="15sp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gender1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2">
+
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gender1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678">
+
+
+        <RadioButton
+            android:id="@+id/not_satisfied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Not satisfied" />
+
+        <RadioButton
+            android:id="@+id/good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Good" />
+
+        <RadioButton
+            android:id="@+id/very_good"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Very good" />
+
+        <RadioButton
+            android:id="@+id/Excellent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10sp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Excellent" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/gender2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender1"
+        app:layout_constraintVertical_bias="0.256">
+
+
+        <RadioButton
+            android:id="@+id/depends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20sp"
+            android:text="depends"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.49"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintVertical_bias="0.446" />
+
+
+        <RadioButton
+            android:id="@+id/later"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20sp"
+            android:text="will decide later"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/likely"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="very likely"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.455" />
+
+    </RadioGroup>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
